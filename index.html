@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="styles.css"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/3682f8cc77.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Movie App</title>
+  </head>
+  <body>
+    <header>
+      <img
+        src="images/app-background.png"
+        alt=""
+      />
+      <div class="nav-container">
+        <div class="searchbar-container">
+          <input type="text" />
+          <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
+        <a
+          class="header-buttons"
+          href="index.html"
+          >HOME</a
+        >
+        <a
+          class="header-buttons"
+          href="library.html"
+          >MY LIBRARY</a
+        >
+      </div>
+      <div class="library-buttons hidden">
+        <a
+          class="header-buttons-library"
+          id="watched-button"
+          href="#"
+          >WATCHED</a
+        >
+        <a
+          class="header-buttons-library"
+          id="queue-button"
+          href="#"
+          >QUEUE</a
+        >
+      </div>
+      <div class="logo">
+        <i class="fa-solid fa-film"></i>
+        <h1>Filmoteka</h1>
+      </div>
+    </header>
+    <main class="movies-container">
+      <!-- <div class="movie-card">
+        <img
+          class="movie-img"
+          src="https://placehold.co/600x400"
+        />
+        <h2 class="movie-name">Movie 1</h2>
+        <p class="movie-genre">Action | 2023</p>
+      </div> -->
+      <!-- <div class="movie-card">
+        <img
+          class="movie-img"
+          src="https://placehold.co/600x400"
+        />
+        <h2 class="movie-name">Movie 1</h2>
+        <p class="movie-genre">Action | 2023</p>
+      </div>
+      <div class="movie-card">
+        <img
+          class="movie-img"
+          src="https://placehold.co/600x400"
+        />
+        <h2 class="movie-name">Movie 1</h2>
+        <p class="movie-genre">Action | 2023</p>
+      </div>
+      <div class="movie-card">
+        <img
+          class="movie-img"
+          src="https://placehold.co/600x400"
+        />
+        <h2 class="movie-name">Movie 1</h2>
+        <p class="movie-genre">Action | 2023</p>
+      </div>
+      <div class="movie-card">
+        <img
+          class="movie-img"
+          src="https://placehold.co/600x400"
+        />
+        <h2 class="movie-name">Movie 1</h2>
+        <p class="movie-genre">Action | 2023</p>
+      </div>
+      <div class="movie-card">
+        <img
+          class="movie-img"
+          src="https://placehold.co/600x400"
+        />
+        <h2 class="movie-name">Movie 1</h2>
+        <p class="movie-genre">Action | 2023</p>
+      </div>
+      <div class="movie-card">
+        <img
+          class="movie-img"
+          src="https://placehold.co/600x400"
+        />
+        <h2 class="movie-name">Movie 1</h2>
+        <p class="movie-genre">Action | 2023</p>
+      </div>
+      <div class="movie-card">
+        <img
+          class="movie-img"
+          src="https://placehold.co/600x400"
+        />
+        <h2 class="movie-name">Movie 1</h2>
+        <p class="movie-genre">Action | 2023</p>
+      </div>
+      <div class="movie-card">
+        <img
+          class="movie-img"
+          src="https://placehold.co/600x400"
+        />
+        <h2 class="movie-name">Movie 1</h2>
+        <p class="movie-genre">Action | 2023</p>
+      </div> -->
+    </main>
+
+    <!-- Modal window -->
+
+    <div class="modal hidden">
+      <!-- <div class="modal-content">
+        <button class="close-button">&times;</button>
+        <div class="modal-left">
+          <img
+            src="https://placehold.co/600x400"
+            alt="Movie Poster"
+            class="poster"
+          />
+        </div>
+        <div class="modal-right">
+          <h2>A FISTFUL OF LEAD</h2>
+          <div class="movie-details">
+            <div class="detail-item">
+              <span class="detail-label">Vote / Votes</span>
+              <span class="detail-value"
+                ><span class="rating-badge">7.3</span> / 1260</span
+              >
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Popularity</span>
+              <span class="detail-value">100.2</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Original Title</span>
+              <span class="detail-value">A FISTFUL OF LEAD</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Genre</span>
+              <span class="detail-value">Western</span>
+            </div>
+          </div>
+          <div class="about">
+            <h3>About</h3>
+            <p>
+              Four of the West's most infamous outlaws assemble to steal a huge
+              stash of gold from the most corrupt settlement of the gold rush
+              towns. But not all goes to plan one is killed and the other three
+              escapes with bags of gold hide out in the abandoned gold mine
+              where they happen across another gang of three – who themselves
+              were planning to hit the very same bank! As tensions rise, things
+              go from bad to worse as they realise the bags of gold are filled
+              with lead... they've been double crossed – but by who and how?
+            </p>
+          </div>
+          <div class="modal-buttons">
+            <button>Add to Watched</button>
+            <button>Add to Queue</button>
+          </div>
+        </div>
+      </div> -->
+    </div>
+
+    <div class="pagination"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

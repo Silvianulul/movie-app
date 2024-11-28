@@ -1,0 +1,368 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Space Grotesk", sans-serif; /* Set a default font */
+  font-style: normal;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 16px; /* Set a default font size */
+  line-height: 1.6; /* Adjust line height for readability */
+  color: #333; /* Set default text color */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  min-height: 100vh; /* Ensure body covers full height of viewport */
+}
+
+header {
+  display: flex;
+  position: relative;
+  padding: 20px;
+}
+header img {
+  width: 100%;
+  height: auto;
+}
+.nav-container {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  margin-left: 32px;
+  margin-top: 16px;
+  gap: 10px;
+  align-items: center;
+}
+.searchbar-container {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 200px;
+  height: 42px;
+  background-color: #fff;
+  border-radius: 30px;
+}
+.searchbar-container input {
+  border: none;
+  outline: none;
+  background-color: white;
+  color: #555;
+  border-radius: 30px;
+  height: 42px;
+  font-size: 18px;
+  width: 150px;
+}
+
+.searchbar-container a {
+  position: absolute; /* Position the icon relative to the container */
+  right: 10px; /* Position it inside the input on the left side */
+  font-size: 16px; /* Adjust icon size */
+  color: #333; /* Icon color */
+}
+
+.header-buttons {
+  padding: 10px 20px; /* Adds padding inside buttons */
+  background-color: #fff; /* Button background color */
+  color: black; /* Button text color */
+  text-decoration: none; /* Removes underline from links */
+  border-radius: 30px; /* Rounded corners */
+  font-size: 16px; /* Adjust font size */
+  display: inline-block; /* Makes links behave like buttons */
+  transition: background-color 0.3s; /* Adds a hover effect */
+}
+.header-buttons:hover {
+  background-color: black;
+  color: #fff;
+}
+
+.library-buttons {
+  position: absolute;
+  display: flex;
+  margin-top: 16px;
+  right: 32px;
+  gap: 10px;
+}
+
+.header-buttons-library {
+  padding: 10px 20px; /* Adds padding inside buttons */
+  background-color: #fff; /* Button background color */
+  color: #d14b3e; /* Button text color */
+  text-decoration: none; /* Removes underline from links */
+  border-radius: 30px; /* Rounded corners */
+  font-size: 16px; /* Adjust font size */
+  display: inline-block; /* Makes links behave like buttons */
+  transition: background-color 0.3s; /* Adds a hover effect */
+}
+.header-buttons-library:hover {
+  background-color: #d14b3e;
+  color: #fff;
+}
+
+.logo {
+  display: flex;
+  position: absolute;
+  bottom: 16px;
+  left: 52px;
+  color: white;
+  gap: 10px;
+  align-items: center;
+}
+
+.logo i {
+  font-size: 59px;
+}
+.logo h1 {
+  font-size: 64px;
+}
+
+.movies-container {
+  gap: 25px;
+  display: flex;
+  flex-wrap: wrap; /* Allows the items to wrap onto multiple lines */
+  justify-content: space-between; /* Distributes space between items */
+  padding: 20px;
+  z-index: -1;
+}
+
+.movie-card {
+  margin-bottom: 20px; /* Adds space between the rows */
+  text-align: left;
+  height: 574px;
+  margin-bottom: 150px;
+}
+
+.movie-card img {
+  max-width: 100%;
+  border-radius: 8px;
+  height: 634px;
+  object-fit: cover;
+}
+
+h2 {
+  font-size: 24px;
+  color: #000000;
+}
+
+p {
+  font-size: 16px;
+  color: #d14b3e;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+  margin-bottom: 20px;
+}
+
+.page-button {
+  background-color: white;
+  border: 1px solid #ddd;
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  margin: 0 4px;
+}
+
+.page-button:hover {
+  background-color: #ddd;
+}
+
+.page-button.active {
+  background-color: #d14b3e;
+  color: white;
+  border-color: #d14b3e;
+}
+
+.page-button:disabled {
+  color: #ddd;
+  cursor: not-allowed;
+}
+
+.page-button:first-child,
+.page-button:last-child {
+  font-weight: bold;
+}
+/* Modal window */
+/* .modal {
+  background-color: white;
+  width: 600px;
+  height: 600px;
+  border: 1px solid black;
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-buttons {
+  position: absolute;
+  display: flex;
+  margin-top: 16px;
+}
+
+.modal-buttons-library {
+  padding: 10px 20px; 
+  background-color: #fff; 
+  color: red; 
+  text-decoration: none; 
+  border-radius: 30px; 
+  border: 1px solid black;
+  font-size: 16px; 
+  display: flex; 
+  transition: background-color 0.3s; 
+  position: relative;
+}
+.modal-buttons-library:hover {
+  background-color: red;
+  color: #fff;
+} */
+/* General Styles */
+
+/* Modal Structure */
+.modal {
+  background-color: white;
+  border: 1px solid #ddd;
+  width: 906px;
+  height: 558px;
+  display: flex;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.modal-left {
+  flex: 0 0 400px;
+  margin-left: 12px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.poster {
+  width: 100%;
+  height: 478px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.modal-right {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.movie-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 8px; /* Add some space between items */
+}
+
+.detail-label {
+  color: #888;
+  width: 150px; /* Set a fixed width for labels */
+  flex-shrink: 0; /* Prevent label from shrinking */
+}
+
+.detail-value {
+  font-weight: bold;
+}
+
+.rating-badge {
+  background-color: #d14b3e;
+  color: white;
+  padding: 3px 6px;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.about {
+  margin-top: 15px;
+}
+
+.about h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.about p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.modal-buttons {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+}
+
+.modal-buttons button {
+  padding: 10px 30px;
+  background-color: #fff;
+  color: #d14b3e;
+  border: 1px solid #d14b3e;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.modal-buttons button:hover {
+  background-color: #d14b3e;
+  color: white;
+}
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  font-size: 40px;
+  color: black;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.close-button:hover {
+  color: #d14b3e;
+}
+.hidden {
+  visibility: hidden;
+}
